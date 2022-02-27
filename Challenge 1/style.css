@@ -1,0 +1,394 @@
+* {
+    box-sizing: border-box;
+}
+
+/* Properties */
+:root {
+    --db05: #091b6f;
+    --db04: #0d28a6;
+    --db03: #5e70c4;
+    --db02: #aeb7e1;
+    --db01: #cfd4ed;
+    --lg05: #3d7b3f;
+    --lg04: #5cb85f;
+    --lg03: #92d094;
+    --lg02: #c9e7ca;
+    --lg01: #def1df;
+    --alert03: #fa2c5a;
+    --alert02: #f9cc00;
+    --alert01: #73ca5c;
+    -neutral05: #151515;
+    --neutral04: #3c3c3c;
+    --neutral03: #8a8a8a;
+    --neutral02: #d0d0d0;
+    --neutral01: #ffffff;
+    --shadowLow: 0 0 4px rgba(0, 0, 0, 15);
+    --shadowHigh: 0 0 10px rgba(0, 0, 0, 15);
+}
+
+.button {
+    background-color: var(--lg04);
+    color: var(--neutral01);
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 12px;
+    border-radius: 2px;
+    opacity: 0.9;
+    transition: 0.3s;
+}
+
+.button:hover {
+    opacity: 1;
+    box-shadow: var(--shadowLow);
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    font-family: "helvetica";
+    margin: 0;
+    background-image: url(".");
+}
+
+.wrapper {
+    overflow: hidden;
+}
+
+h1 {
+    font-weight: 700;
+    line-height: 54px;
+    font-size: 36px;
+}
+
+h2 {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 36px;
+}
+
+h5 {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+/* Bagian container */
+.containers {
+    width: 100%;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: auto;
+    grid-template-areas:
+        "navbar"
+        "hero"
+        "services"
+        "why-us"
+        "testi"
+        "sewa-mobil"
+        "faq"
+        "footer";
+}
+
+/* Bagian Navbar */
+.navbar {
+    position: fixed;
+    z-index: 5;
+    grid-area: navbar;
+}
+
+.nav-item {
+    margin-right: 32px;
+}
+
+.nav-link span {
+    color: black;
+}
+
+/* Bagian Hero section */
+.hero-section {
+    display: grid;
+    grid-area: hero;
+    background-color: #f1f3ff;
+    min-height: 500px;
+}
+
+.hero-writing {
+    grid-area: hero-writing;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.hero-writing p {
+    font-weight: 300;
+    line-height: 20px;
+    font-size: 14px;
+}
+
+.hero-writing .button {
+    width: 180px;
+}
+
+.hero-pict {
+    grid-area: hero-pict;
+    display: flex;
+    justify-content: flex-end;
+    margin: auto -2rem -1rem auto;
+}
+
+.hero-pict img {
+    width: 100%;
+    height: auto;
+    transform: scale(0.9, 0.9);
+    background-image: url(./item/image/bg.png);
+    background-repeat: no-repeat;
+    background-position: 0 200px;
+}
+
+/* Bagian Our Services */
+.services {
+    display: grid;
+    grid-area: services;
+    overflow: hidden;
+}
+
+.serv-img {
+    align-self: center;
+    grid-area: serv-img;
+    width: 100%;
+}
+
+.serv-img img {
+    width: 100%;
+    height: auto;
+}
+
+.serv-desc {
+    display: flex;
+    flex-direction: column;
+    grid-area: serv-desc;
+    justify-content: center;
+}
+
+.checklist p::before {
+    content: "";
+    display: block;
+    float: left;
+    width: 32px;
+    height: 32px;
+    background: url(item/image/checklist.png) no-repeat;
+}
+
+.checklist p {
+    display: inline-block;
+}
+
+/* Bagian why us */
+.why-us {
+    display: flex;
+    flex-direction: column;
+    grid-area: why-us;
+    grid-auto-rows: auto;
+    grid-template-areas:
+        "why-title"
+        "why-card";
+}
+
+.why-title {
+    display: block;
+    grid-area: why-title;
+}
+
+.why-cards {
+    display: flex;
+    flex-wrap: wrap;
+    grid-area: why-card;
+    justify-content: space-between;
+}
+
+.why-card {
+    border: #d0d0d0 solid 1px;
+    border-radius: 8px;
+    margin-bottom: 30px;
+    padding: 24px;
+}
+
+.why-card img {
+    width: 32px;
+    height: 32px;
+    margin-bottom: 16px;
+}
+
+/* Bagian testimoni */
+.testimoni {
+    display: grid;
+    align-self: center;
+    grid-area: testi;
+    grid-auto-rows: auto;
+    grid-template-columns: 100%;
+    grid-template-areas:
+        "testi-title"
+        "testi-card"
+        "testi-button";
+}
+
+.testi-title {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    grid-area: testi-title;
+}
+
+.testi-cards {
+    background-color: #091b6f;
+    position: relative;
+    grid-area: testi-card;
+    display: flex;
+    min-height: 270px;
+    width: 160%;
+}
+
+.testi-card {
+    background-color: #f1f3ff;
+    box-shadow: var(--shadowLow);
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+}
+
+.testi-card .profile {
+    width: 80px;
+    height: 80px;
+    margin: auto 20px;
+}
+
+.testi-desc {
+    display: block;
+}
+
+.control-button {
+    justify-content: center;
+    display: flex;
+    grid-area: testi-button;
+}
+
+.control-button button {
+    margin: 1rem;
+    display: flex;
+    align-items: center;
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    transition: 0.4s;
+}
+
+.back-button {
+    background-color: var(--neutral01);
+    border: 1px solid #c4c4c4;
+    display: flex;
+    justify-content: center;
+    opacity: 0.9;
+}
+
+.next-button {
+    background-color: var(--neutral01);
+    border: 1px solid #c4c4c4;
+    opacity: 0.9;
+    display: flex;
+    justify-content: center;
+}
+
+.next-button:hover,
+.back-button:hover {
+    box-shadow: var(--shadowLow);
+    opacity: 1;
+    background-color: var(--lg04);
+    color: var(--neutral01);
+    transform: scale(1.2);
+    border: none;
+}
+/* bagian sewa mobil */
+.sewa-mobil {
+    margin: 100px 0;
+    padding: 0 132px;
+    width: 100%;
+    grid-area: sewa-mobil;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sewa-card {
+    padding: 64px 0;
+    width: 100%;
+    color: var(--neutral01);
+    background-color: var(--db04);
+    border-radius: 13px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.sewa-card h1 {
+    text-align: center;
+    justify-content: center;
+    max-width: 70%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.sewa-card p {
+    text-align: center;
+    min-height: 40px;
+    width: 60%;
+    margin: 16px auto 52px auto;
+}
+
+/* Bagian FAQ */
+.faq-sec {
+    grid-area: faq;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 0 136px;
+    grid-template-areas: "faq-writing faq-box";
+}
+
+.faq-title {
+    grid-area: faq-writing;
+}
+
+.faq-boxes {
+    grid-area: faq-box;
+}
+
+/* Bagian Footer */
+footer {
+    grid-area: footer;
+}
+
+.icon img {
+    padding: 10px 0;
+}
+
+.fitur-menu li {
+    list-style: none;
+    display: flex;
+}
+
+.fitur-menu a {
+    text-decoration: none;
+    color: black;
+}
+
+.copyright img {
+    width: 100px;
+    height: 34px;
+}

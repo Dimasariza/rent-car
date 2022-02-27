@@ -1,0 +1,96 @@
+@import url(style.css);
+
+@media screen and (min-width: 1023px) {
+  .navbar {
+    padding: 0 125px;
+  }
+
+  /* Bagian Hero */
+  .hero-section {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "hero-writing hero-pict";
+  }
+
+  .hero-writing {
+    padding: 177px 0 87px 136px;
+  }
+
+  .hero-writing p {
+    max-width: 80%;
+  }
+
+  /* Bagian Testimoni */
+  .testi-cards {
+    right: 30%;
+    width: 160%;
+    padding: 20px 40px;
+  }
+
+  .testi-card {
+    margin: 1rem 4rem;
+  }
+
+  /* Bagian Our Services */
+  .services {
+    display: grid;
+    grid-area: services;
+    grid-template-columns: 45% 55%;
+    grid-template-areas: "serv-img serv-desc";
+    padding: 100px 207px;
+  }
+
+  .serv-img {
+    align-self: center;
+    grid-area: serv-img;
+    width: 100%;
+  }
+
+  .serv-img img {
+    width: 100%;
+    height: auto;
+  }
+
+  .serv-desc {
+    display: flex;
+    flex-direction: column;
+    grid-area: serv-desc;
+    justify-content: center;
+    padding-left: 80px;
+  }
+
+  /* Bagian Why */
+  .why-us {
+    padding: 50px 136px;
+  }
+
+  .why-card {
+    width: 266px;
+  }
+
+  /* Bagian Footer */
+  footer {
+    margin-top: 10rem;
+  }
+
+  .footer {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    padding: 0 136px;
+  }
+
+  .adress {
+    display: flex;
+  }
+
+  .connect-withus {
+    display: flex;
+    flex-direction: column;
+    align-content: flex-start;
+  }
+
+  .copyright {
+    display: flex;
+    flex-direction: column;
+  }
+}
